@@ -24,13 +24,15 @@ export function GameCard({ title, description, coverImage, link }: GameCardProps
       <RouterLink to={link}>
         <Box
           position="relative"
-          h="240px"
+          w="100%"
+          aspectRatio="16/9"
           overflow="hidden"
+          bg="black"
         >
           <Image
             src={coverImage}
             alt={title}
-            objectFit="cover"
+            objectFit="contain"
             w="100%"
             h="100%"
             transition="transform 0.3s"

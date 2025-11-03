@@ -1,19 +1,8 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  Container,
-  HStack,
-  Heading,
-  Image,
-  Separator,
-  Stack,
-  Table,
-  Tag,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Button, Container, HStack, Heading, Image, Separator, Stack, Table, Tag, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
+
+import { useSettings } from '@/hooks/use-settings';
 
 // Types for data
 interface Skill {
@@ -97,15 +86,7 @@ export function Page(): React.JSX.Element {
   const names = React.useMemo(() => characters.map((c) => c.name), [characters]);
   const showList = filtered.slice(0, visibleCount);
 
-  // 取 primary color 变量
-  const [primaryColor, setPrimaryColor] = React.useState('#3182ce');
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const style = getComputedStyle(document.documentElement);
-      const color = style.getPropertyValue('--colors-primary-500') || '#3182ce';
-      setPrimaryColor(color.trim() || '#3182ce');
-    }
-  }, []);
+  const { settings } = useSettings();
 
   return (
     <React.Fragment>
@@ -116,16 +97,13 @@ export function Page(): React.JSX.Element {
         bg="white"
         _dark={{ bg: 'gray.950' }}
         py={{ base: 6, md: 10 }}
-        sx={{
-          '--primary-color': primaryColor,
-        }}
       >
         <Container maxW="container.xl">
           <Stack gap={6}>
             <Heading
               as="h1"
-              size="xl"
-              color="var(--primary-color)"
+              size="2xl"
+              color={`${settings.primaryColor}.500`}
             >
               拳皇97 出招表
             </Heading>
@@ -146,15 +124,8 @@ export function Page(): React.JSX.Element {
                 <Button
                   size="sm"
                   variant={selectedName === null ? 'solid' : 'outline'}
+                  colorPalette={settings.primaryColor}
                   onClick={() => setSelectedName(null)}
-                  sx={{
-                    color: selectedName === null ? '#fff' : primaryColor,
-                    bg: selectedName === null ? primaryColor : 'transparent',
-                    border: `2px solid ${primaryColor}`,
-                    fontWeight: selectedName === null ? 700 : 500,
-                    boxShadow: selectedName === null ? `0 0 0 2px ${primaryColor}33` : 'none',
-                    transition: 'all 0.2s',
-                  }}
                 >
                   全部
                 </Button>
@@ -163,15 +134,8 @@ export function Page(): React.JSX.Element {
                     key={name}
                     size="sm"
                     variant={selectedName === name ? 'solid' : 'outline'}
+                    colorPalette={settings.primaryColor}
                     onClick={() => setSelectedName(name)}
-                    sx={{
-                      color: selectedName === name ? '#fff' : primaryColor,
-                      bg: selectedName === name ? primaryColor : 'transparent',
-                      border: `2px solid ${primaryColor}`,
-                      fontWeight: selectedName === name ? 700 : 500,
-                      boxShadow: selectedName === name ? `0 0 0 2px ${primaryColor}33` : 'none',
-                      transition: 'all 0.2s',
-                    }}
                   >
                     {name}
                   </Button>
@@ -236,18 +200,27 @@ export function Page(): React.JSX.Element {
                     </Tag.Root>
                   </HStack>
 
-                  <Box overflowX="auto">
+                  {/* Desktop table */}
+                  <Box
+                    display={{ base: 'none', md: 'block' }}
+                    overflowX="auto"
+                  >
                     <Table.Root
-                      size="sm"
+                      size="md"
                       variant="outline"
                     >
                       <Table.Header>
                         <Table.Row>
                           <Table.ColumnHeader minW="80px">招式</Table.ColumnHeader>
                           <Table.ColumnHeader minW="60px">类型</Table.ColumnHeader>
-                          <Table.ColumnHeader minW="100px">指令</Table.ColumnHeader>
-                          <Table.ColumnHeader minW="120px">说明</Table.ColumnHeader>
-                          <Table.ColumnHeader minW="450px">图片</Table.ColumnHeader>
+                          <Table.ColumnHeader
+                            w="260px"
+                            minW="200px"
+                          >
+                            说明
+                          </Table.ColumnHeader>
+                          <Table.ColumnHeader minW="80px">指令</Table.ColumnHeader>
+                          <Table.ColumnHeader textAlign="right">图片</Table.ColumnHeader>
                         </Table.Row>
                       </Table.Header>
                       <Table.Body>
@@ -257,28 +230,17 @@ export function Page(): React.JSX.Element {
                               minW="80px"
                               textAlign="left"
                             >
-                              {s.name}
+                              <Text fontSize="md">{s.name}</Text>
                             </Table.Cell>
                             <Table.Cell
                               minW="60px"
                               textAlign="left"
                             >
-                              {s.type}
+                              <Text fontSize="md">{s.type}</Text>
                             </Table.Cell>
                             <Table.Cell
-                              minW="100px"
                               textAlign="left"
-                            >
-                              <Text
-                                whiteSpace="pre-wrap"
-                                textAlign="left"
-                              >
-                                {s.command}
-                              </Text>
-                            </Table.Cell>
-                            <Table.Cell
-                              minW="120px"
-                              textAlign="left"
+                              maxW="260px"
                             >
                               <Text
                                 color="gray.600"
@@ -286,33 +248,44 @@ export function Page(): React.JSX.Element {
                                 whiteSpace="pre-wrap"
                                 wordBreak="break-all"
                                 textAlign="left"
+                                fontSize="md"
                               >
                                 {s.description}
                               </Text>
                             </Table.Cell>
-                            <Table.Cell minW="450px">
+                            <Table.Cell
+                              minW="80px"
+                              textAlign="left"
+                            >
+                              <Text
+                                whiteSpace="pre-wrap"
+                                textAlign="left"
+                                fontSize="md"
+                              >
+                                {s.command}
+                              </Text>
+                            </Table.Cell>
+                            <Table.Cell>
                               {Array.isArray(s.images) && s.images.length > 0 ? (
-                                <Box w="100%">
-                                  <Stack
-                                    direction="row"
-                                    flexWrap="wrap"
-                                    gap={2}
-                                    rowGap={2}
-                                  >
-                                    {s.images.map((img, i) => (
-                                      <Image
-                                        key={img + i}
-                                        src={`/assets/kof97/${char.name}/${img}`}
-                                        alt={`${char.name}-${s.name}-${i}`}
-                                        width={450}
-                                        height={300}
-                                        objectFit="cover"
-                                        loading="lazy"
-                                        borderRadius="md"
-                                        style={{ width: '450px', height: '300px', marginRight: 8, marginBottom: 8 }}
-                                      />
-                                    ))}
-                                  </Stack>
+                                <Box
+                                  w={{ base: '100%', md: '620px' }}
+                                  display="flex"
+                                  justifyContent="flex-end"
+                                  gap={2}
+                                >
+                                  {s.images.map((img, i) => (
+                                    <Image
+                                      key={img + i}
+                                      src={`/assets/kof97/${char.name}/${img}`}
+                                      alt={`${char.name}-${s.name}-${i}`}
+                                      width="300px"
+                                      height="auto"
+                                      objectFit="contain"
+                                      loading="lazy"
+                                      borderRadius="md"
+                                      maxW="300px"
+                                    />
+                                  ))}
                                 </Box>
                               ) : null}
                             </Table.Cell>
@@ -321,6 +294,64 @@ export function Page(): React.JSX.Element {
                       </Table.Body>
                     </Table.Root>
                   </Box>
+
+                  {/* Mobile stacked layout */}
+                  <Stack
+                    gap={4}
+                    display={{ base: 'flex', md: 'none' }}
+                  >
+                    {char.skills.map((s, idx) => (
+                      <Box
+                        key={`${char.name}-m-${idx}-${s.name}`}
+                        borderWidth="1px"
+                        borderRadius="md"
+                        p={3}
+                      >
+                        <Stack gap={2}>
+                          <Text
+                            fontSize="lg"
+                            fontWeight="bold"
+                          >
+                            {s.name}
+                          </Text>
+                          <HStack>
+                            <Tag.Root size="sm">
+                              <Tag.Label>{s.type}</Tag.Label>
+                            </Tag.Root>
+                          </HStack>
+                          {s.description ? (
+                            <Text
+                              fontSize="md"
+                              color="gray.600"
+                              _dark={{ color: 'gray.400' }}
+                              whiteSpace="pre-wrap"
+                            >
+                              {s.description}
+                            </Text>
+                          ) : null}
+                          <Text
+                            fontSize="md"
+                            color="gray.700"
+                            _dark={{ color: 'gray.200' }}
+                            whiteSpace="pre-wrap"
+                          >
+                            {s.command}
+                          </Text>
+                          {Array.isArray(s.images) && s.images.length > 0 ? (
+                            <Image
+                              src={`/assets/kof97/${char.name}/${s.images[0]}`}
+                              alt={`${char.name}-${s.name}-0`}
+                              w="100%"
+                              h="auto"
+                              objectFit="contain"
+                              loading="lazy"
+                              borderRadius="md"
+                            />
+                          ) : null}
+                        </Stack>
+                      </Box>
+                    ))}
+                  </Stack>
                 </Box>
               ))}
 
