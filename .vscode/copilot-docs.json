@@ -1,0 +1,9 @@
+{
+  "include": [
+    "https://chakra-ui.com/llms.txt",
+    "https://chakra-ui.com/llms-components.txt",
+    "https://chakra-ui.com/llms-styling.txt",
+    "https://chakra-ui.com/llms-theming.txt",
+    "https://chakra-ui.com/llms-v3-migration.txt"
+  ]
+}

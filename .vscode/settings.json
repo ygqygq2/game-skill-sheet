@@ -1,0 +1,11 @@
+{
+  "github.copilot.advanced": {
+    "docFilters": ["https://chakra-ui.com/"]
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  }
+}

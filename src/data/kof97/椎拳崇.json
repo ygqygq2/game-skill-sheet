@@ -1,0 +1,117 @@
+{
+  "name": "椎拳崇",
+  "skills": [
+    {
+      "name": "发劲",
+      "type": "投技",
+      "command": "近敌←或→+C",
+      "description": "近身投技，快速摔投对手。"
+    },
+    { "name": "巴投", "type": "投技", "command": "近敌←或→+D", "description": "近身摔技。" },
+    {
+      "name": "虎扑手",
+      "type": "特殊技",
+      "command": "→+A",
+      "description": "中段攻击，无法蹲防。",
+      "images": ["584_2025032053851785.png"]
+    },
+    {
+      "name": "后旋腿",
+      "type": "特殊技",
+      "command": "→+B",
+      "description": "后旋踢击。",
+      "images": ["584_2025032053850443.png"]
+    },
+    {
+      "name": "超球弹",
+      "type": "必杀技",
+      "command": "↓↙←+A或C",
+      "description": "发射能量球。",
+      "images": ["584_2025032053850212.gif"]
+    },
+    {
+      "name": "龙爪击",
+      "type": "必杀技",
+      "command": "空中↓↙←+A或C",
+      "description": "空中能量爪击。",
+      "images": ["584_2025032053851112.gif"]
+    },
+    {
+      "name": "龙连打",
+      "type": "必杀技",
+      "command": "近敌→↓↘+A或C（命中后C连按可追加）",
+      "description": "打击投技，无法防御，命中后可连击。",
+      "images": ["584_2025032053851376.gif"]
+    },
+    {
+      "name": "龙顽碎",
+      "type": "必杀技",
+      "command": "←↓↙+B或D",
+      "description": "下段踢击。",
+      "images": ["584_2025032053851750.gif"]
+    },
+    {
+      "name": "龙连牙·地龙",
+      "type": "必杀技",
+      "command": "←↙↓↘→+A",
+      "description": "地面突进攻击。",
+      "images": ["584_2025032053850312.gif"]
+    },
+    {
+      "name": "龙连牙·天龙",
+      "type": "必杀技",
+      "command": "←↙↓↘→+C",
+      "description": "空中突进攻击。",
+      "images": ["584_2025032053850259.gif"]
+    },
+    {
+      "name": "神龙凄煌裂脚",
+      "type": "超必杀技",
+      "command": "↓↘→↘↓↙←+B",
+      "description": "超必杀下段踢击。",
+      "images": ["584_2025032053849822.gif"]
+    },
+    {
+      "name": "神龙天舞脚",
+      "type": "超必杀技",
+      "command": "↓↘→↘↓↙←+D",
+      "description": "超必杀连续踢击。",
+      "images": ["584_2025032053849470.gif"]
+    },
+    {
+      "name": "MAX神龙天舞脚",
+      "type": "超必杀技",
+      "command": "↓↘→↘↓↙←+B或D",
+      "description": "MAX版超必杀连续踢击。",
+      "images": ["584_2025032053849413.gif"]
+    },
+    {
+      "name": "仙气发劲",
+      "type": "超必杀技",
+      "command": "近敌↓↘→↓↘→+A或C",
+      "description": "指令投技，无法防御。",
+      "images": ["584_2025032053848817.gif"]
+    },
+    {
+      "name": "MAX仙气发劲",
+      "type": "超必杀技",
+      "command": "近敌↓↘→↓↘→+A或C",
+      "description": "MAX版指令投技，无法防御。",
+      "images": ["584_2025032053851553.gif"]
+    },
+    {
+      "name": "吃肉包",
+      "type": "特殊技",
+      "command": "↓↙←↓↙←+A或C",
+      "description": "恢复少量体力。",
+      "images": ["584_2025032053849320.gif"]
+    },
+    {
+      "name": "MAX吃肉包",
+      "type": "特殊技",
+      "command": "↓↙←↓↙←+A或C",
+      "description": "先恢复体力，后扣除体力。",
+      "images": ["584_2025032053851806.gif"]
+    }
+  ]
+}

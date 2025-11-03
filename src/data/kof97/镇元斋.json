@@ -1,0 +1,117 @@
+{
+  "name": "镇元斋",
+  "skills": [
+    {
+      "name": "强饮酒",
+      "type": "投技",
+      "command": "近敌←或→+C",
+      "description": "近身投技，快速摔投对手。"
+    },
+    { "name": "逆脚投", "type": "投技", "command": "近敌←或→+D", "description": "近身摔技。" },
+    {
+      "name": "醉步漂燕袭",
+      "type": "特殊技",
+      "command": "→+A",
+      "description": "特殊步法攻击。",
+      "images": ["584_202503205460790.gif"]
+    },
+    {
+      "name": "瓢燕袭",
+      "type": "必杀技",
+      "command": "↓↙←+A或C",
+      "description": "可抵消飞行道具。",
+      "images": ["584_2025032054608339.gif"]
+    },
+    {
+      "name": "柳瓶芃莱",
+      "type": "必杀技",
+      "command": "→↓↘+A或C",
+      "description": "A键发动有防反效果。",
+      "images": ["584_2025032054608820.gif"]
+    },
+    {
+      "name": "回转空突拳",
+      "type": "必杀技",
+      "command": "←↙↓↘→+B或D",
+      "description": "可躲避悬空的飞行道具。",
+      "images": ["584_2025032054607878.gif"]
+    },
+    {
+      "name": "醉管卷翅",
+      "type": "必杀技",
+      "command": "↓↘→+A或C",
+      "description": "特殊动作，发动后上半身无敌。",
+      "images": ["584_2025032054606914.gif"]
+    },
+    {
+      "name": "快速取消",
+      "type": "必杀技",
+      "command": "“醉管卷翅”发动后A+B+C+D",
+      "description": "快速取消技能。",
+      "images": ["584_2025032054607408.gif"]
+    },
+    {
+      "name": "蝶袭鲇鱼",
+      "type": "必杀技",
+      "command": "“醉管卷翅”发动后→+A或C",
+      "description": "追加攻击。",
+      "images": ["584_2025032054606147.gif"]
+    },
+    {
+      "name": "望月醉",
+      "type": "必杀技",
+      "command": "↓↙←+B或D",
+      "description": "特殊动作，可用←或→控制左右移动。",
+      "images": ["584_2025032054606785.gif"]
+    },
+    {
+      "name": "龙蛇反跃",
+      "type": "必杀技",
+      "command": "“望月醉”发动后↑+B",
+      "description": "追加跳跃攻击。",
+      "images": ["584_2025032054606311.gif"]
+    },
+    {
+      "name": "鲇鱼反跃",
+      "type": "必杀技",
+      "command": "“望月醉”发动后↑+D",
+      "description": "追加跳跃攻击。",
+      "images": ["584_2025032054606211.gif"]
+    },
+    {
+      "name": "快速取消",
+      "type": "必杀技",
+      "command": "“望月醉”发动后A+B+C+D",
+      "description": "快速取消技能。",
+      "images": ["584_2025032054808215.gif"]
+    },
+    {
+      "name": "轰栏炎炮",
+      "type": "超必杀技",
+      "command": "↓↘→↓↘→+A或C",
+      "description": "超必杀能量攻击。",
+      "images": ["584_2025032054605938.gif"]
+    },
+    {
+      "name": "MAX轰栏炎炮",
+      "type": "超必杀技",
+      "command": "↓↘→↓↘→+A或C",
+      "description": "MAX版超必杀能量攻击。",
+      "images": ["584_2025032054604467.gif"]
+    },
+    {
+      "name": "轰炎招来",
+      "type": "超必杀技",
+      "command": "↓↘→↘↓↙←+A或C",
+      "description": "超必杀追加攻击。",
+      "images": ["584_2025032054605511.gif"]
+    },
+    {
+      "name": "MAX轰炎招来",
+      "type": "超必杀技",
+      "command": "↓↘→↘↓↙←+A或C",
+      "description": "MAX版超必杀追加攻击。",
+      "images": ["584_2025032054605795.gif"]
+    }
+  ]
+}
