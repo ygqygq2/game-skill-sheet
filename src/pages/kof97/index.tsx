@@ -1,7 +1,8 @@
-import { Box, Button, Container, HStack, Heading, Image, Separator, Stack, Table, Tag, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Heading, HStack, Image, Separator, Stack, Table, Tag, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import { ImageCarousel } from '@/components/core/image-carousel';
 import { useSettings } from '@/hooks/use-settings';
 
 // Types for data
@@ -268,24 +269,16 @@ export function Page(): React.JSX.Element {
                             <Table.Cell>
                               {Array.isArray(s.images) && s.images.length > 0 ? (
                                 <Box
-                                  w={{ base: '100%', md: '620px' }}
                                   display="flex"
                                   justifyContent="flex-end"
-                                  gap={2}
                                 >
-                                  {s.images.map((img, i) => (
-                                    <Image
-                                      key={img + i}
-                                      src={`/assets/kof97/${char.name}/${img}`}
-                                      alt={`${char.name}-${s.name}-${i}`}
-                                      width="300px"
-                                      height="auto"
-                                      objectFit="contain"
-                                      loading="lazy"
-                                      borderRadius="md"
-                                      maxW="300px"
-                                    />
-                                  ))}
+                                  <ImageCarousel
+                                    images={s.images}
+                                    basePath={`/assets/kof97/${char.name}`}
+                                    alt={`${char.name}-${s.name}`}
+                                    width="500px"
+                                    autoPlayInterval={3000}
+                                  />
                                 </Box>
                               ) : null}
                             </Table.Cell>
@@ -303,18 +296,29 @@ export function Page(): React.JSX.Element {
                     {char.skills.map((s, idx) => (
                       <Box
                         key={`${char.name}-m-${idx}-${s.name}`}
-                        borderWidth="1px"
-                        borderRadius="md"
-                        p={3}
+                        borderWidth="0"
+                        borderTopWidth="1px"
+                        borderColor="gray.200"
+                        _dark={{ borderColor: 'gray.700' }}
+                        p={0}
                       >
-                        <Stack gap={2}>
+                        <Stack
+                          gap={0}
+                          pt={3}
+                          pb={3}
+                          px={0}
+                        >
                           <Text
                             fontSize="lg"
                             fontWeight="bold"
+                            mb={0}
                           >
                             {s.name}
                           </Text>
-                          <HStack>
+                          <HStack
+                            mt={0}
+                            mb={2}
+                          >
                             <Tag.Root size="sm">
                               <Tag.Label>{s.type}</Tag.Label>
                             </Tag.Root>
@@ -325,6 +329,7 @@ export function Page(): React.JSX.Element {
                               color="gray.600"
                               _dark={{ color: 'gray.400' }}
                               whiteSpace="pre-wrap"
+                              mb={2}
                             >
                               {s.description}
                             </Text>
@@ -334,21 +339,22 @@ export function Page(): React.JSX.Element {
                             color="gray.700"
                             _dark={{ color: 'gray.200' }}
                             whiteSpace="pre-wrap"
+                            mb={0}
                           >
                             {s.command}
                           </Text>
-                          {Array.isArray(s.images) && s.images.length > 0 ? (
-                            <Image
-                              src={`/assets/kof97/${char.name}/${s.images[0]}`}
-                              alt={`${char.name}-${s.name}-0`}
-                              w="100%"
-                              h="auto"
-                              objectFit="contain"
-                              loading="lazy"
-                              borderRadius="md"
-                            />
-                          ) : null}
                         </Stack>
+                        {Array.isArray(s.images) && s.images.length > 0 ? (
+                          <Box mt={0}>
+                            <ImageCarousel
+                              images={s.images}
+                              basePath={`/assets/kof97/${char.name}`}
+                              alt={`${char.name}-${s.name}`}
+                              width="100%"
+                              autoPlayInterval={3000}
+                            />
+                          </Box>
+                        ) : null}
                       </Box>
                     ))}
                   </Stack>

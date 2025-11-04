@@ -16,8 +16,8 @@ import { Icon } from '@iconify/react';
 import * as React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { paths } from '@/paths';
 import { useSettings } from '@/hooks/use-settings';
+import { paths } from '@/paths';
 
 export function Included(): React.JSX.Element {
   const { settings } = useSettings();

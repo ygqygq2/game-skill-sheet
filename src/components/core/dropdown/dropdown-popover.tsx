@@ -1,5 +1,5 @@
-import { Popover } from '@chakra-ui/react';
 import type { SystemStyleObject } from '@chakra-ui/react';
+import { Popover } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { DropdownContext } from './dropdown-context';

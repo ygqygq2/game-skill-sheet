@@ -4,11 +4,11 @@ import { Box, Button, Container, Image, Stack, Text } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 import * as React from 'react';
 
-import { NoSsr } from '@/components/core/no-ssr';
 import { RouterLink } from '@/components/core/link';
+import { NoSsr } from '@/components/core/no-ssr';
 import { useColorModeValue } from '@/hooks/use-color-mode';
-import { paths } from '@/paths';
 import { useSettings } from '@/hooks/use-settings';
+import { paths } from '@/paths';
 
 export function StartBuilding(): React.JSX.Element {
   const colorScheme = useColorModeValue('light', 'dark');

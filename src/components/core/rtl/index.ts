@@ -1,2 +1,2 @@
-export { Rtl } from './rtl';
 export type { RTLProps } from './rtl';
+export { Rtl } from './rtl';

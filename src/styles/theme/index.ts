@@ -7,6 +7,6 @@
  * - 支持 light/dark 模式自动反转
  */
 
+export * as colors from './colors';
 export { system } from './system';
 export * from './types';
-export * as colors from './colors';

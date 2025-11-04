@@ -24,7 +24,6 @@ export function SettingsButton(): React.JSX.Element {
     if (openDrawer && settings.colorScheme !== colorMode) {
       setSettings({ ...settings, colorScheme: colorMode });
     }
-    // eslint-disable-next-line
   }, [openDrawer]);
 
   const handleUpdate = async (values: Partial<Settings>): Promise<void> => {

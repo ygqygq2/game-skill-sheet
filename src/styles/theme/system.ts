@@ -1,4 +1,5 @@
 import { createSystem, defaultConfig, defineConfig } from '@chakra-ui/react';
+
 import * as colors from './colors';
 import { components } from './components/components';
 import type { PaletteRange } from './types';

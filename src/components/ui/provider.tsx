@@ -6,10 +6,9 @@ import { Helmet } from 'react-helmet-async';
 
 import { useSettings } from '@/hooks/use-settings';
 
+import { system } from '../../styles/theme/system';
 import { Rtl } from '../core/rtl';
 import { ColorModeProvider, type ColorModeProviderProps } from './color-mode';
-
-import { system } from '../../styles/theme/system';
 
 export function Provider(props: ColorModeProviderProps) {
   const { settings } = useSettings();
