@@ -1,6 +1,6 @@
 [
   {
-    "name": "七枷社",
+    "name": "暴走七枷社",
     "skills": [
       { "name": "缚", "type": "投技", "command": "近敌←或→+C" },
       { "name": "幕", "type": "投技", "command": "近敌←或→+D" },

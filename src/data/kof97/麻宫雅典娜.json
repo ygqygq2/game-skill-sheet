@@ -1,134 +1,136 @@
-{
-  "name": "麻宫雅典娜",
-  "skills": [
-    {
-      "name": "位投",
-      "type": "投技",
-      "command": "近敌←或→+C",
-      "description": "近身投技，快速摔投对手。"
-    },
-    {
-      "name": "精神力投",
-      "type": "投技",
-      "command": "近敌←或→+D",
-      "description": "近身精神力摔技。"
-    },
-    {
-      "name": "精神射击",
-      "type": "投技",
-      "command": "空中近敌↑以外方向+C或D",
-      "description": "空中投技，需在跳跃时近身使用。"
-    },
-    {
-      "name": "三角跳",
-      "type": "特殊技",
-      "command": "空中画面边缘↗",
-      "description": "空中反弹跳跃。"
-    },
-    {
-      "name": "连环腿",
-      "type": "特殊技",
-      "command": "→+B",
-      "description": "连续踢击。",
-      "images": ["584_2025031854617257.gif"]
-    },
-    {
-      "name": "凤凰弹",
-      "type": "特殊技",
-      "command": "空中↓+B",
-      "description": "空中下踢。",
-      "images": ["584_2025031854617969.gif"]
-    },
-    {
-      "name": "精神力球",
-      "type": "必杀技",
-      "command": "↓↙←+A或C",
-      "description": "发射能量球。",
-      "images": ["584_2025031854616797.jpg"]
-    },
-    {
-      "name": "凤凰箭",
-      "type": "必杀技",
-      "command": "空中↓↙←+A或C",
-      "description": "空中能量箭。",
-      "images": ["584_2025031854617722.gif"]
-    },
-    {
-      "name": "划空光剑",
-      "type": "必杀技",
-      "command": "→↓↘+A或C（可在空中使用）",
-      "description": "能量光剑斩击。",
-      "images": ["584_2025031854617850.gif"]
-    },
-    {
-      "name": "心灵传送术",
-      "type": "必杀技",
-      "command": "↓↘→+B或D",
-      "description": "瞬间移动技能，距离随按键强度变化。",
-      "images": ["584_2025031854617843.gif"]
-    },
-    {
-      "name": "精神力反射波",
-      "type": "必杀技",
-      "command": "→↘↓↙←+B或D",
-      "description": "反射飞行道具。",
-      "images": ["584_202503185461726.gif"]
-    },
-    {
-      "name": "超级精神穿透",
-      "type": "超必杀技",
-      "command": "近敌←↙↓↘→+C",
-      "description": "指令投技，浮空效果，可追击。",
-      "images": ["584_2025031854617474.gif"]
-    },
-    {
-      "name": "闪光水晶波",
-      "type": "超必杀技",
-      "command": "←→↘↓↙←+A或C（可在空中使用）",
-      "description": "能量波攻击。",
-      "images": ["584_2025031854616187.gif"]
-    },
-    {
-      "name": "水晶超射",
-      "type": "超必杀技",
-      "command": "“闪光水晶波”发动后↓↙←+A或C",
-      "description": "追加能量射击，可蓄力。",
-      "images": ["584_2025031854616705.gif"]
-    },
-    {
-      "name": "MAX闪光水晶波",
-      "type": "超必杀技",
-      "command": "←→↘↓↙←+A或C（可在空中使用）",
-      "description": "MAX版能量波攻击。",
-      "images": ["584_2025031854615691.gif"]
-    },
-    {
-      "name": "快速取消",
-      "type": "超必杀技",
-      "command": "“闪光水晶波”或“MAX闪光水晶波”发动后A+B+C+D",
-      "description": "快速取消技能。",
-      "images": ["584_2025031854618817.gif", "584_202503185461451.gif"]
-    },
-    {
-      "name": "MAX水晶超射",
-      "type": "超必杀技",
-      "command": "“闪光水晶波”发动后↓↙←+A或C",
-      "description": "MAX版追加能量射击，可蓄力。",
-      "images": ["584_2025031854616416.gif"]
-    },
-    {
-      "name": "凤凰锐箭",
-      "type": "超必杀技",
-      "command": "空中↓↘→↓↘→+A或C",
-      "description": "空中能量锐箭。",
-      "images": ["584_2025031854614889.gif"]
-    },
-    {
-      "name": "MAX凤凰锐箭",
-      "type": "超必杀技",
-      "command": "空中↓↘→↓↘→+A或C",
-      "description": "MAX版空中能量锐箭。",
-      "images": ["584_2025031854614119.gif"]
-    }
-  ]
-}
+[
+  {
+    "name": "麻宫雅典娜",
+    "skills": [
+      {
+        "name": "位投",
+        "type": "投技",
+        "command": "近敌←或→+C",
+        "description": "近身投技，快速摔投对手。"
+      },
+      {
+        "name": "精神力投",
+        "type": "投技",
+        "command": "近敌←或→+D",
+        "description": "近身精神力摔技。"
+      },
+      {
+        "name": "精神射击",
+        "type": "投技",
+        "command": "空中近敌↑以外方向+C或D",
+        "description": "空中投技，需在跳跃时近身使用。"
+      },
+      {
+        "name": "三角跳",
+        "type": "特殊技",
+        "command": "空中画面边缘↗",
+        "description": "空中反弹跳跃。"
+      },
+      {
+        "name": "连环腿",
+        "type": "特殊技",
+        "command": "→+B",
+        "description": "连续踢击。",
+        "images": ["584_2025031854617257.gif"]
+      },
+      {
+        "name": "凤凰弹",
+        "type": "特殊技",
+        "command": "空中↓+B",
+        "description": "空中下踢。",
+        "images": ["584_2025031854617969.gif"]
+      },
+      {
+        "name": "精神力球",
+        "type": "必杀技",
+        "command": "↓↙←+A或C",
+        "description": "发射能量球。",
+        "images": ["584_2025031854616797.jpg"]
+      },
+      {
+        "name": "凤凰箭",
+        "type": "必杀技",
+        "command": "空中↓↙←+A或C",
+        "description": "空中能量箭。",
+        "images": ["584_2025031854617722.gif"]
+      },
+      {
+        "name": "划空光剑",
+        "type": "必杀技",
+        "command": "→↓↘+A或C（可在空中使用）",
+        "description": "能量光剑斩击。",
+        "images": ["584_2025031854617850.gif"]
+      },
+      {
+        "name": "心灵传送术",
+        "type": "必杀技",
+        "command": "↓↘→+B或D",
+        "description": "瞬间移动技能，距离随按键强度变化。",
+        "images": ["584_2025031854617843.gif"]
+      },
+      {
+        "name": "精神力反射波",
+        "type": "必杀技",
+        "command": "→↘↓↙←+B或D",
+        "description": "反射飞行道具。",
+        "images": ["584_202503185461726.gif"]
+      },
+      {
+        "name": "超级精神穿透",
+        "type": "超必杀技",
+        "command": "近敌←↙↓↘→+C",
+        "description": "指令投技，浮空效果，可追击。",
+        "images": ["584_2025031854617474.gif"]
+      },
+      {
+        "name": "闪光水晶波",
+        "type": "超必杀技",
+        "command": "←→↘↓↙←+A或C（可在空中使用）",
+        "description": "能量波攻击。",
+        "images": ["584_2025031854616187.gif"]
+      },
+      {
+        "name": "水晶超射",
+        "type": "超必杀技",
+        "command": "“闪光水晶波”发动后↓↙←+A或C",
+        "description": "追加能量射击，可蓄力。",
+        "images": ["584_2025031854616705.gif"]
+      },
+      {
+        "name": "MAX闪光水晶波",
+        "type": "超必杀技",
+        "command": "←→↘↓↙←+A或C（可在空中使用）",
+        "description": "MAX版能量波攻击。",
+        "images": ["584_2025031854615691.gif"]
+      },
+      {
+        "name": "快速取消",
+        "type": "超必杀技",
+        "command": "“闪光水晶波”或“MAX闪光水晶波”发动后A+B+C+D",
+        "description": "快速取消技能。",
+        "images": ["584_2025031854618817.gif", "584_202503185461451.gif"]
+      },
+      {
+        "name": "MAX水晶超射",
+        "type": "超必杀技",
+        "command": "“闪光水晶波”发动后↓↙←+A或C",
+        "description": "MAX版追加能量射击，可蓄力。",
+        "images": ["584_2025031854616416.gif"]
+      },
+      {
+        "name": "凤凰锐箭",
+        "type": "超必杀技",
+        "command": "空中↓↘→↓↘→+A或C",
+        "description": "空中能量锐箭。",
+        "images": ["584_2025031854614889.gif"]
+      },
+      {
+        "name": "MAX凤凰锐箭",
+        "type": "超必杀技",
+        "command": "空中↓↘→↓↘→+A或C",
+        "description": "MAX版空中能量锐箭。",
+        "images": ["584_2025031854614119.gif"]
+      }
+    ]
+  }
+]
