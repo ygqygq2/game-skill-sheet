@@ -1,6 +1,6 @@
 'use client';
 
-import { Badge, Box, Container, HStack, IconButton, Tag, Text, VStack } from '@chakra-ui/react';
+import { Badge, Box, Container, HStack, IconButton, Text, VStack } from '@chakra-ui/react';
 import { Icon as IconifyIcon } from '@iconify/react';
 import type { EmblaCarouselType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';

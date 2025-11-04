@@ -22,7 +22,7 @@ interface Character {
 // Load all character json files under src/data/kof97
 function useKof97Data() {
   // Using Vite's glob import to eagerly load JSON files
-  const modules = React.useMemo(
+  const modules = React.useMemo<Record<string, { default: Array<Character> }>>(
     () => import.meta.glob<{ default: Array<Character> }>('@/data/kof97/*.json', { eager: true }),
     []
   );
@@ -30,7 +30,7 @@ function useKof97Data() {
   const characters = React.useMemo<Character[]>(() => {
     const list: Character[] = [];
     for (const key of Object.keys(modules)) {
-      const mod = (modules as any)[key];
+      const mod = modules[key];
       const arr = (mod?.default ?? []) as Array<Character>;
       if (Array.isArray(arr) && arr.length > 0 && arr[0]) {
         // Files are arrays with a single character object

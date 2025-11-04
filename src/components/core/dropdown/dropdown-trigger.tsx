@@ -11,7 +11,11 @@ export function DropdownTrigger({ children }: DropdownTriggerProps): React.JSX.E
   const { onTriggerKeyUp, onTriggerMouseEnter, onTriggerMouseLeave } = useDropdownContext();
 
   // 使用类型断言来处理 children
-  const child = React.Children.only(children) as React.ReactElement<any>;
+  const child = React.Children.only(children) as React.ReactElement<{
+    onKeyUp?: (e: React.KeyboardEvent<HTMLElement>) => void;
+    onMouseEnter?: (e: React.MouseEvent<HTMLElement>) => void;
+    onMouseLeave?: (e: React.MouseEvent<HTMLElement>) => void;
+  }>;
 
   const enhancedChild = React.cloneElement(child, {
     onKeyUp: (e: React.KeyboardEvent<HTMLElement>) => {

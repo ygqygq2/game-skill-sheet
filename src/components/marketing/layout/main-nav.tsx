@@ -18,7 +18,7 @@ export function MainNav(): React.JSX.Element {
   const colors = useColors();
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
   const pathname = usePathname();
-  const neutral = (colors as any)?.palette?.neutral || (colors as any)?.palette?.secondary;
+  const neutral = colors?.palette?.neutral || colors?.palette?.secondary;
   const headerBg = neutral?.[950] || '#0b0d11';
 
   return (
@@ -133,8 +133,8 @@ export function NavItem({
   const colors = useColors();
   const active = isNavItemActive({ disabled, external, href, matcher, pathname });
   const hasPopover = Boolean(children);
-  const neutral = (colors as any)?.palette?.neutral || (colors as any)?.palette?.secondary;
-  const primary = (colors as any)?.palette?.primary;
+  const neutral = colors?.palette?.neutral || colors?.palette?.secondary;
+  const primary = colors?.palette?.primary;
   const defaultColor = neutral?.[300] || 'rgba(255,255,255,0.72)';
   const activeText = 'white';
 

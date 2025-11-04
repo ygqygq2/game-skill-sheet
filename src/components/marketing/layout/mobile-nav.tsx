@@ -220,7 +220,7 @@ function NavItem({
 
   const color = colorMode === 'light' ? 'gray.800' : 'white';
   const hoverBg = colorMode === 'light' ? 'gray.100' : 'gray.700';
-  const activeColor = colorMode === 'light' ? 'white' : 'gray.800';
+  const _activeColor = colorMode === 'light' ? 'white' : 'gray.800';
   const activeBg = colorMode === 'light' ? 'blue.600' : 'blue.500';
 
   return (

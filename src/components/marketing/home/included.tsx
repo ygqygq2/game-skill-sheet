@@ -1,17 +1,4 @@
-import {
-  Badge,
-  Box,
-  Button,
-  Container,
-  Grid,
-  GridItem,
-  Image,
-  Stack,
-  Tag,
-  TagLabel,
-  TagLeftIcon,
-  Text,
-} from '@chakra-ui/react';
+import { Badge, Box, Button, Container, Grid, GridItem, Image, Stack, Text } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 import * as React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
