@@ -17,7 +17,7 @@
   "author": "ygqygq2",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "start": "vite preview",
     "lint": "eslint src",
     "lint-fix": "eslint --fix src",

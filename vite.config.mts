@@ -12,7 +12,7 @@ export default defineConfig(({ command }) => {
     base: command === 'serve' ? '/' : './',
     plugins: [react()],
     build: {
-      outDir: 'dist/vite',
+      outDir: 'dist',
     },
     resolve: {
       alias: [
