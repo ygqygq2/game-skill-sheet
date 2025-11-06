@@ -74,7 +74,7 @@ export function SettingsButton(): React.JSX.Element {
           justifyContent="center"
           bg="gray.900"
           color="white"
-          zIndex="tooltip"
+          zIndex={999}
           padding="10px"
           _hover={{
             bg: 'gray.700',
