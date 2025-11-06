@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Heading, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
+import { getAssetUrl } from '@/lib/get-asset-url';
 import { paths } from '@/paths';
 
 import { GameCard } from './game-card';
@@ -10,7 +11,7 @@ const games = [
     id: 'kof97',
     title: 'The King of Fighters 97',
     description: '拳皇97 - 经典格斗游戏，收录全部角色出招表及连招技巧',
-    coverImage: '/assets/kof97-title.png',
+    coverImage: getAssetUrl('/assets/kof97-title.png'),
     link: paths.kof97,
   },
 ];

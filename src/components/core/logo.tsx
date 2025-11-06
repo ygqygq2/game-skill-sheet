@@ -5,6 +5,7 @@ import * as React from 'react';
 
 import { NoSsr } from '@/components/core/no-ssr';
 import { useColorMode } from '@/hooks/use-color-mode';
+import { getAssetUrl } from '@/lib/get-asset-url';
 
 const HEIGHT = 60;
 const WIDTH = 60;
@@ -22,9 +23,9 @@ export function Logo({ color = 'dark', emblem, height = HEIGHT, width = WIDTH }:
   let url: string;
 
   if (emblem) {
-    url = color === 'light' ? '/assets/logo-emblem.svg' : '/assets/logo-emblem--dark.svg';
+    url = color === 'light' ? getAssetUrl('/assets/logo-emblem.svg') : getAssetUrl('/assets/logo-emblem--dark.svg');
   } else {
-    url = color === 'light' ? '/assets/logo.svg' : '/assets/logo--dark.svg';
+    url = color === 'light' ? getAssetUrl('/assets/logo.svg') : getAssetUrl('/assets/logo--dark.svg');
   }
 
   return (

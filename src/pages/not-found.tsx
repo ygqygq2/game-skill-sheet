@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link as RouterLink } from 'react-router-dom';
 
-import helpImage from '/assets/help.png';
+import { getAssetUrl } from '@/lib/get-asset-url';
 import { paths } from '@/paths';
 
 import { config } from '../config';
@@ -99,7 +99,7 @@ export function Page(): React.JSX.Element {
                 display="inline-block"
                 width={{ base: '15rem', md: '20.4rem' }}
                 height={{ base: '15rem', md: '20.4rem' }}
-                backgroundImage={`url(${helpImage})`}
+                backgroundImage={`url(${getAssetUrl('/assets/help.png')})`}
                 backgroundRepeat="no-repeat"
                 backgroundSize="contain"
                 backgroundPosition="center"

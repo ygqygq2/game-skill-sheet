@@ -6,6 +6,7 @@ import * as React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import { I18nProvider } from '@/components/core/i18n-provider';
+import { ScrollRestoration } from '@/components/core/scroll-restoration';
 import { SettingsButton } from '@/components/core/settings/settings-button';
 import { Toaster } from '@/components/core/toaster';
 import { Provider } from '@/components/ui/provider';
@@ -42,6 +43,7 @@ export function Root({ children }: RootProps): React.JSX.Element {
             <SettingsProvider settings={settings.current}>
               <I18nProvider language="en">
                 {children}
+                <ScrollRestoration />
                 <SettingsButton />
                 <Toaster />
               </I18nProvider>

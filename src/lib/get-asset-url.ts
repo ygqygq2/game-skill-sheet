@@ -17,6 +17,8 @@ export function getAssetUrl(path: string): string {
     return `${config.cdn.baseUrl}/${cdnPath}`;
   }
 
-  // For non-kof97 assets or when CDN is not configured, use local path
-  return `/${normalizedPath}`;
+  // For non-kof97 assets or when CDN is not configured, prefix with Vite base path
+  const base: string = (import.meta as unknown as { env?: { BASE_URL?: string } }).env?.BASE_URL ?? '/';
+  const baseTrimmed = typeof base === 'string' ? base.replace(/\/$/, '') : '';
+  return `${baseTrimmed}/${normalizedPath}`;
 }

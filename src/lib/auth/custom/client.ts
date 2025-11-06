@@ -1,5 +1,6 @@
 'use client';
 
+import { getAssetUrl } from '@/lib/get-asset-url';
 import type { User } from '@/types/user';
 
 function generateToken(): string {
@@ -10,7 +11,7 @@ function generateToken(): string {
 
 const user = {
   id: 'USR-000',
-  avatar: '/assets/avatar.png',
+  avatar: getAssetUrl('/assets/avatar.png'),
   firstName: 'Sofia',
   lastName: 'Rivers',
   email: 'admin@ygqygq2.com',

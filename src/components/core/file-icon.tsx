@@ -1,6 +1,8 @@
 import { Box } from '@chakra-ui/react';
 import * as React from 'react';
 
+import { getAssetUrl } from '@/lib/get-asset-url';
+
 const icons: Record<string, string> = {
   jpeg: '/assets/icon-jpg.svg',
   jpg: '/assets/icon-jpg.svg',
@@ -35,7 +37,7 @@ export function FileIcon({ extension }: FileIconProps): React.JSX.Element {
       <Box
         as="img"
         alt="File"
-        src={icon}
+        src={getAssetUrl(icon)}
         h="100%"
         w="auto"
       />
