@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import { ImageCarousel } from '@/components/core/image-carousel';
 import { useSettings } from '@/hooks/use-settings';
+import { getAssetUrl } from '@/lib/get-asset-url';
 
 // Types for data
 interface Skill {
@@ -178,7 +179,7 @@ export function Page(): React.JSX.Element {
                           mb={1}
                         >
                           <Image
-                            src="/assets/kof97/placeholder.png"
+                            src={getAssetUrl('/assets/kof97/placeholder.png')}
                             alt="占位图标"
                             width={75}
                             height={75}
@@ -274,7 +275,7 @@ export function Page(): React.JSX.Element {
                                 >
                                   <ImageCarousel
                                     images={s.images}
-                                    basePath={`/assets/kof97/${char.name}`}
+                                    basePath={getAssetUrl(`/assets/kof97/${char.name}`)}
                                     alt={`${char.name}-${s.name}`}
                                     width="500px"
                                     autoPlayInterval={3000}
@@ -348,7 +349,7 @@ export function Page(): React.JSX.Element {
                           <Box mt={0}>
                             <ImageCarousel
                               images={s.images}
-                              basePath={`/assets/kof97/${char.name}`}
+                              basePath={getAssetUrl(`/assets/kof97/${char.name}`)}
                               alt={`${char.name}-${s.name}`}
                               width="100%"
                               autoPlayInterval={3000}

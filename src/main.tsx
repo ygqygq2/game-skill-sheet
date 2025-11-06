@@ -8,17 +8,26 @@ import { routes } from './routes';
 const container = document.getElementById('root');
 
 const root = createRoot(container!);
-const router = createBrowserRouter([
+
+// 获取 base path，支持任意目录部署
+const basename = import.meta.env.BASE_URL || '/';
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: (
+        <Root>
+          <Outlet />
+        </Root>
+      ),
+      children: [...routes],
+    },
+  ],
   {
-    path: '/',
-    element: (
-      <Root>
-        <Outlet />
-      </Root>
-    ),
-    children: [...routes],
-  },
-]);
+    basename,
+  }
+);
 
 root.render(
   <React.StrictMode>

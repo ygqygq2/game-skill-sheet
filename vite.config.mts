@@ -6,10 +6,13 @@ import { defineConfig } from 'vite';
 const root = __dirname;
 
 export default defineConfig(({ command }) => {
+  // 从环境变量获取 base path，支持 GitHub Pages 非根目录部署
+  const basePath = process.env.BASE_PATH || '/';
+
   return {
     root,
-    // dev 环境使用 /，prod 环境使用 './'
-    base: command === 'serve' ? '/' : './',
+    // dev 环境使用 /，prod 环境使用环境变量中的 base path 或相对路径
+    base: command === 'serve' ? '/' : basePath,
     plugins: [react()],
     build: {
       outDir: 'dist',

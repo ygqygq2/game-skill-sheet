@@ -29,6 +29,7 @@ export interface Config {
   supabase: { url?: string; anonKey?: string };
   mapbox: { apiKey?: string };
   gtm?: { id?: string };
+  cdn: { baseUrl?: string };
 }
 
 export const config = {
@@ -60,4 +61,5 @@ export const config = {
   supabase: { url: import.meta.env.VITE_SUPABASE_URL, anonKey: import.meta.env.VITE_SUPABASE_ANON_KEY },
   mapbox: { apiKey: import.meta.env.VITE_MAPBOX_API_KEY },
   gtm: { id: import.meta.env.VITE_GOOGLE_TAG_MANAGER_ID },
+  cdn: { baseUrl: import.meta.env.VITE_CDN_BASE_URL },
 } satisfies Config;
