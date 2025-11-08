@@ -6,13 +6,14 @@ import { defineConfig } from 'vite';
 const root = __dirname;
 
 export default defineConfig(({ command }) => {
-  // 从环境变量获取 base path，支持 GitHub Pages 非根目录部署
+  // 从环境变量获取 base path，支持任意子目录部署（GitHub Pages、Vercel、自定义域名等）
+  // CI 环境会通过 BASE_PATH 传入，本地开发默认 /
   const basePath = process.env.BASE_PATH || '/';
 
   return {
     root,
-    // dev 环境使用 /，prod 环境使用环境变量中的 base path 或相对路径
-    base: command === 'serve' ? '/' : basePath,
+    // dev 和 prod 都使用相同逻辑：优先环境变量，否则默认根路径
+    base: basePath,
     plugins: [react()],
     build: {
       outDir: 'dist',

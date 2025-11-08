@@ -9,8 +9,8 @@ export interface SpritePosition {
   height: number; // 头像高度
 }
 
-// 雪碧图路径
-export const SPRITE_IMAGE = '/assets/kof97/avatar-spire.png';
+// 雪碧图路径（本地小文件）
+export const SPRITE_IMAGE = '/assets/images/kof97/avatar-spire.png';
 
 // 雪碧图总尺寸
 export const SPRITE_WIDTH = 3306;

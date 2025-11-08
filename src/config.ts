@@ -29,7 +29,13 @@ export interface Config {
   supabase: { url?: string; anonKey?: string };
   mapbox: { apiKey?: string };
   gtm?: { id?: string };
-  cdn: { baseUrl?: string };
+  cdn: {
+    baseUrl?: string;
+    /** CDN 资源路径规则：只有匹配这些模式的资源才走 CDN */
+    includePaths?: string[];
+    /** CDN 排除路径规则：即使匹配 includePaths 也要排除的路径 */
+    excludePaths?: string[];
+  };
 }
 
 export const config = {
@@ -61,5 +67,11 @@ export const config = {
   supabase: { url: import.meta.env.VITE_SUPABASE_URL, anonKey: import.meta.env.VITE_SUPABASE_ANON_KEY },
   mapbox: { apiKey: import.meta.env.VITE_MAPBOX_API_KEY },
   gtm: { id: import.meta.env.VITE_GOOGLE_TAG_MANAGER_ID },
-  cdn: { baseUrl: import.meta.env.VITE_CDN_BASE_URL },
+  cdn: {
+    baseUrl: import.meta.env.VITE_CDN_BASE_URL,
+    // kof97 角色技能图等大文件走 CDN
+    includePaths: ['assets/kof97/**'],
+    // 不需要排除了，小文件已经移到 assets/images/ 目录
+    excludePaths: [],
+  },
 } satisfies Config;

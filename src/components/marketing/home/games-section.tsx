@@ -10,7 +10,7 @@ const games = [
     id: 'kof97',
     title: 'The King of Fighters 97',
     description: '拳皇97 - 经典格斗游戏,收录全部角色出招表及连招技巧',
-    coverImage: '/assets/kof97/kof97-title.png', // 使用本地路径，不走 CDN
+    coverImage: '/assets/images/kof97/kof97-title.png', // 本地小文件
     link: paths.kof97,
   },
 ];
