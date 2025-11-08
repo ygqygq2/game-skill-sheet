@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL='/'" />
+    <script>
+      // SPA for GitHub Pages: preserve path after refresh by redirecting to /?/<path>
+      (function () {
+        var l = window.location;
+        var segments = l.pathname.split('/');
+        // For GitHub project pages, keep first segment (repo name)
+        var pathSegmentsToKeep = 1;
+        var base = segments.slice(0, 1 + pathSegmentsToKeep).join('/');
+        var rest = segments.slice(1 + pathSegmentsToKeep).join('/');
+        var newUrl = l.protocol + '//' + l.host + base + '/?/' + rest + l.search + l.hash;
+        l.replace(newUrl);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
