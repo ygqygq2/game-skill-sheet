@@ -1,6 +1,9 @@
 [
   {
     "name": "坂崎由莉",
+    "avatar": {
+      "sprite": { "x": 3007, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "鬼张手",

@@ -1,6 +1,9 @@
 [
   {
     "name": "大门五郎",
+    "avatar": {
+      "sprite": { "x": 582, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "十字绞", "type": "投技", "command": "近敌(紧贴)←或→+C" },
       { "name": "掴扣付", "type": "投技", "command": "近敌(距离稍远)←或→+C" },

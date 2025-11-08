@@ -1,6 +1,9 @@
 [
   {
     "name": "哈迪伦",
+    "avatar": {
+      "sprite": { "x": 1503, "y": 1113, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "杀手钻",

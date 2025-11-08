@@ -1,6 +1,9 @@
 [
   {
     "name": "神乐千鹤",
+    "avatar": {
+      "sprite": { "x": 2426, "y": 279, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "令月",

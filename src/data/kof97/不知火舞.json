@@ -1,6 +1,9 @@
 [
   {
     "name": "不知火舞",
+    "avatar": {
+      "sprite": { "x": 2717, "y": 279, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "不知火刚临", "type": "投技", "command": "近敌←或→+C" },
       { "name": "风车崩", "type": "投技", "command": "近敌←或→+D" },

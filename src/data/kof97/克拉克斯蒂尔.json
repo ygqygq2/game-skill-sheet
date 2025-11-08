@@ -1,6 +1,9 @@
 [
   {
     "name": "克拉克斯蒂尔",
+    "avatar": {
+      "sprite": { "x": 582, "y": 279, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "德式背投",

@@ -1,6 +1,9 @@
 [
   {
     "name": "克里斯",
+    "avatar": {
+      "sprite": { "x": 1794, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "旋转踩踏", "type": "投技", "command": "近敌←或→+C" },
       { "name": "空投", "type": "投技", "command": "近敌←或→+D" },

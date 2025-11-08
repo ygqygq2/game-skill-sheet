@@ -1,6 +1,9 @@
 [
   {
     "name": "暴走莉安娜",
+    "avatar": {
+      "sprite": { "x": 2110, "y": 1390, "width": 276, "height": 252 }
+    },
     "skills": [
       { "name": "杀手钻", "type": "投技", "command": "近敌←或→+C" },
       { "name": "背袭", "type": "投技", "command": "近敌←或→+D" },

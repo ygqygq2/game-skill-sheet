@@ -1,6 +1,9 @@
 [
   {
     "name": "布鲁玛莉",
+    "avatar": {
+      "sprite": { "x": 2717, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "胜利投", "type": "投技", "command": "近敌←或→+C" },
       { "name": "头抛", "type": "投技", "command": "近敌←或→+D" },

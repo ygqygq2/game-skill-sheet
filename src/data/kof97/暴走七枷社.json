@@ -1,6 +1,7 @@
 [
   {
     "name": "暴走七枷社",
+    "avatar": { "sprite": { "x": 1212, "y": 1390, "width": 276, "height": 252 } },
     "skills": [
       { "name": "缚", "type": "投技", "command": "近敌←或→+C" },
       { "name": "幕", "type": "投技", "command": "近敌←或→+D" },

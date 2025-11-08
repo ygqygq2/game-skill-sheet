@@ -1,6 +1,9 @@
 [
   {
     "name": "罗伯特嘉西亚",
+    "avatar": {
+      "sprite": { "x": 2717, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "龙跳脚",

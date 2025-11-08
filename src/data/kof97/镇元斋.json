@@ -1,6 +1,9 @@
 [
   {
     "name": "镇元斋",
+    "avatar": {
+      "sprite": { "x": 1794, "y": 279, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "强饮酒",

@@ -1,0 +1,25 @@
+[
+  {
+    "name": "莉安娜",
+    "avatar": {
+      "sprite": { "x": 0, "y": 279, "width": 300, "height": 252 }
+    },
+    "skills": [
+      { "name": "杀手钻", "type": "投技", "command": "近敌←或→+C" },
+      { "name": "背袭", "type": "投技", "command": "近敌←或→+D" },
+      { "name": "哈迪伦地狱投", "type": "投技", "command": "空中近敌↑以外方向+C或D" },
+      { "name": "月光锯", "type": "必杀技", "command": "↓蓄↑+A或C" },
+      { "name": "威武军刀", "type": "必杀技", "command": "←蓄→+B或D" },
+      { "name": "粉碎者", "type": "必杀技", "command": "D键发动的\"威武军刀\"中→+D" },
+      { "name": "X口径炮", "type": "必杀技", "command": "↓蓄↑+B或D" },
+      { "name": "涡旋发射器", "type": "必杀技", "command": "←蓄→+A或C" },
+      { "name": "眼之斩", "type": "必杀技", "command": "↓↙←+A或C" },
+      { "name": "V字金锯", "type": "超必杀技", "command": "空中↓↘→↘↓↙←+A或C" },
+      { "name": "MAX V字金锯", "type": "超必杀技", "command": "空中↓↘→↘↓↙←+A或C" },
+      { "name": "重力风暴", "type": "超必杀技", "command": "↓↘→↓↘→+A或C" },
+      { "name": "MAX重力风暴", "type": "超必杀技", "command": "↓↘→↓↘→+A或C" },
+      { "name": "旋转的火花", "type": "超必杀技", "command": "↓↙←↙↓↘→+B或D" },
+      { "name": "MAX旋转的火花", "type": "超必杀技", "command": "↓↙←↙↓↘→+B或D" }
+    ]
+  }
+]

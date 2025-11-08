@@ -1,6 +1,9 @@
 [
   {
     "name": "东丈",
+    "avatar": {
+      "sprite": { "x": 1794, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "膝地狱", "type": "投技", "command": "近敌←或→+C" },
       { "name": "脚投", "type": "投技", "command": "近敌←或→+D" },

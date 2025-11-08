@@ -1,6 +1,9 @@
 [
   {
     "name": "山崎龙二",
+    "avatar": {
+      "sprite": { "x": 2426, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "缔上", "type": "投技", "command": "近敌←或→+C" },
       { "name": "乱投", "type": "投技", "command": "近敌←或→+D" },

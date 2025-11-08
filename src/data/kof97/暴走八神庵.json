@@ -1,6 +1,9 @@
 [
   {
     "name": "暴走八神庵",
+    "avatar": {
+      "sprite": { "x": 897, "y": 1390, "width": 276, "height": 252 }
+    },
     "skills": [
       { "name": "逆剥", "type": "投技", "command": "近敌←或→+C" },
       { "name": "逆逆剥", "type": "投技", "command": "近敌←或→+D" },

@@ -1,6 +1,9 @@
 [
   {
     "name": "麻宫雅典娜",
+    "avatar": {
+      "sprite": { "x": 1212, "y": 279, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "位投",

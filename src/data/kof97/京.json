@@ -1,6 +1,9 @@
 [
   {
     "name": "京",
+    "avatar": {
+      "sprite": { "x": 3007, "y": 279, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "颜面蹴", "type": "投技", "command": "近敌←或→+C" },
       { "name": "足勾摔", "type": "投技", "command": "近敌←或→+D" },

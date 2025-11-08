@@ -1,6 +1,9 @@
 [
   {
     "name": "夏尔米",
+    "avatar": {
+      "sprite": { "x": 1503, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "夏尔米闪光", "type": "投技", "command": "近敌←或→+C" },
       { "name": "弯投", "type": "投技", "command": "近敌←或→+D" },

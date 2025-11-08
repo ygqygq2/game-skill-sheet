@@ -1,6 +1,9 @@
 [
   {
     "name": "陈国汉",
+    "avatar": {
+      "sprite": { "x": 291, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "破颜击", "type": "投技", "command": "近敌←或→+C" },
       { "name": "锁缔", "type": "投技", "command": "近敌←或→+D" },

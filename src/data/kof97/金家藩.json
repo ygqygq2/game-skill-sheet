@@ -1,6 +1,9 @@
 [
   {
     "name": "金家藩",
+    "avatar": {
+      "sprite": { "x": 0, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "头像",

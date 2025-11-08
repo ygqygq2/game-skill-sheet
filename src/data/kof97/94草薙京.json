@@ -1,6 +1,9 @@
 [
   {
     "name": "94草薙京",
+    "avatar": {
+      "sprite": { "x": 0, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "扒铁", "type": "投技", "command": "近敌←或→+C" },
       { "name": "一刹背负投", "type": "投技", "command": "近敌←或→+D" },

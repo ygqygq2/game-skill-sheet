@@ -1,6 +1,9 @@
 [
   {
     "name": "二阶堂红丸",
+    "avatar": {
+      "sprite": { "x": 291, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "居合投", "type": "投技", "command": "近敌←或→+C" },
       { "name": "背倒摔", "type": "投技", "command": "近敌←或→+D" },

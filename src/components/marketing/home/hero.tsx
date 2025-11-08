@@ -18,13 +18,13 @@ export function Hero(): React.JSX.Element {
       <Container
         maxW="container.md"
         position="relative"
-        py="120px"
+        py="60px"
         zIndex={3}
       >
-        <Stack gap={4}>
+        <Stack gap={3}>
           <Stack gap={2}>
             <Text
-              fontSize="3.5rem"
+              fontSize="2.5rem"
               fontWeight="600"
               lineHeight="1.2"
               textAlign="center"

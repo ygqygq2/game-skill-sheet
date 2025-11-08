@@ -1,6 +1,9 @@
 [
   {
     "name": "蔡宝健",
+    "avatar": {
+      "sprite": { "x": 582, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "头乘刺", "type": "投技", "command": "近敌←或→+C" },
       { "name": "下血突", "type": "投技", "command": "近敌←或→+D" },

@@ -1,6 +1,9 @@
 [
   {
     "name": "安迪",
+    "avatar": {
+      "sprite": { "x": 1503, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "刚临·改", "type": "投技", "command": "近敌←或→+C" },
       { "name": "抱袭投", "type": "投技", "command": "近敌←或→+D" },

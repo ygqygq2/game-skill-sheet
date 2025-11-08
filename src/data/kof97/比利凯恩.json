@@ -1,6 +1,9 @@
 [
   {
     "name": "比利凯恩",
+    "avatar": {
+      "sprite": { "x": 3007, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "地狱落", "type": "投技", "command": "近敌←或→+C" },
       { "name": "一本钓投", "type": "投技", "command": "近敌←或→+D" },

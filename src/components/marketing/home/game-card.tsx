@@ -20,37 +20,32 @@ export function GameCard({ title, description, coverImage, link }: GameCardProps
         boxShadow: 'xl',
       }}
       cursor="pointer"
+      maxW="600px"
+      mx="auto"
     >
       <RouterLink to={link}>
         <Box
           position="relative"
           w="100%"
-          aspectRatio="16/9"
+          h="300px"
           overflow="hidden"
-          bg="black"
+          bg="gray.100"
+          _dark={{ bg: 'gray.800' }}
         >
           <Image
             src={coverImage}
             alt={title}
-            objectFit="contain"
+            objectFit="fill"
             w="100%"
             h="100%"
             transition="transform 0.3s"
             _groupHover={{ transform: 'scale(1.05)' }}
           />
-          <Box
-            position="absolute"
-            top={0}
-            left={0}
-            w="100%"
-            h="100%"
-            bg="linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)"
-          />
         </Box>
-        <Card.Body>
-          <Stack gap={2}>
+        <Card.Body p={6}>
+          <Stack gap={3}>
             <Text
-              fontSize="xl"
+              fontSize="2xl"
               fontWeight="bold"
             >
               {title}
@@ -58,6 +53,7 @@ export function GameCard({ title, description, coverImage, link }: GameCardProps
             <Text
               color="gray.600"
               _dark={{ color: 'gray.400' }}
+              fontSize="md"
             >
               {description}
             </Text>

@@ -1,6 +1,9 @@
 [
   {
     "name": "七枷社",
+    "avatar": {
+      "sprite": { "x": 1212, "y": 556, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "肝脏猛击", "type": "投技", "command": "近敌←或→+C" },
       { "name": "扼杀投", "type": "投技", "command": "近敌←或→+D" },

@@ -1,6 +1,9 @@
 [
   {
     "name": "八神庵",
+    "avatar": {
+      "sprite": { "x": 1212, "y": 1113, "width": 276, "height": 252 }
+    },
     "skills": [
       { "name": "逆剥", "type": "投技", "command": "←/→+C" },
       { "name": "逆逆剥", "type": "投技", "command": "←/→+D" },

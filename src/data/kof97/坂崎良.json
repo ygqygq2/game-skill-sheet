@@ -1,6 +1,9 @@
 [
   {
     "name": "坂崎良",
+    "avatar": {
+      "sprite": { "x": 2426, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "体落",

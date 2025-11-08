@@ -3,6 +3,8 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import { ImageCarousel } from '@/components/core/image-carousel';
+import { Kof97Avatar } from '@/components/kof97/kof97-avatar';
+import type { SpritePosition } from '@/config/kof97-sprite';
 import { useSettings } from '@/hooks/use-settings';
 import { getAssetUrl } from '@/lib/get-asset-url';
 
@@ -18,6 +20,11 @@ interface Skill {
 interface Character {
   name: string;
   skills: Skill[];
+  avatar?: string | { sprite?: SpritePosition };
+}
+
+function hasSprite(a: Character['avatar']): a is { sprite: SpritePosition } {
+  return !!a && typeof a === 'object' && 'sprite' in a && !!(a as any).sprite;
 }
 
 // Load all character json files under src/data/kof97
@@ -178,19 +185,30 @@ export function Page(): React.JSX.Element {
                           mt={2}
                           mb={1}
                         >
-                          <Image
-                            src={getAssetUrl('/assets/kof97/placeholder.png')}
-                            alt="占位图标"
-                            width={75}
-                            height={75}
-                            style={{
-                              width: '75px',
-                              height: '75px',
-                              objectFit: 'cover',
-                              borderRadius: '8px',
-                              background: '#eee',
-                            }}
-                          />
+                          {hasSprite(char.avatar) ? (
+                            <Kof97Avatar
+                              characterName={char.name}
+                              fitToSize={false}
+                              spriteScale={0.3}
+                              border="1px solid"
+                              borderColor="gray.300"
+                              spriteOverride={char.avatar.sprite}
+                            />
+                          ) : (
+                            <Image
+                              src={getAssetUrl('/assets/kof97/placeholder.png')}
+                              alt="占位图标"
+                              width={75}
+                              height={75}
+                              style={{
+                                width: '75px',
+                                height: '75px',
+                                objectFit: 'cover',
+                                borderRadius: '8px',
+                                background: '#eee',
+                              }}
+                            />
+                          )}
                         </Box>
                       </Box>
                     </HStack>

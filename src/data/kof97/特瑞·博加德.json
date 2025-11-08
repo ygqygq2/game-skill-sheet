@@ -1,6 +1,9 @@
 [
   {
     "name": "特瑞·博加德",
+    "avatar": {
+      "sprite": { "x": 1212, "y": 0, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "升龙摔", "type": "投技", "command": "近敌←或→+C" },
       { "name": "强袭投", "type": "投技", "command": "近敌←或→+D" },

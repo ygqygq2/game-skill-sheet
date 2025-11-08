@@ -1,7 +1,6 @@
 import { Box, Container, Grid, Heading, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { getAssetUrl } from '@/lib/get-asset-url';
 import { paths } from '@/paths';
 
 import { GameCard } from './game-card';
@@ -10,8 +9,8 @@ const games = [
   {
     id: 'kof97',
     title: 'The King of Fighters 97',
-    description: '拳皇97 - 经典格斗游戏，收录全部角色出招表及连招技巧',
-    coverImage: getAssetUrl('/assets/kof97-title.png'),
+    description: '拳皇97 - 经典格斗游戏,收录全部角色出招表及连招技巧',
+    coverImage: '/assets/kof97/kof97-title.png', // 使用本地路径，不走 CDN
     link: paths.kof97,
   },
 ];
@@ -21,24 +20,24 @@ export function GamesSection(): React.JSX.Element {
     <Box
       bg="white"
       _dark={{ bg: 'gray.950' }}
-      py="80px"
+      py="40px"
     >
       <Container maxW="container.xl">
-        <Stack gap={6}>
+        <Stack gap={8}>
           <Stack
             gap={2}
             textAlign="center"
           >
             <Heading
               as="h2"
-              size="2xl"
+              size="xl"
             >
               游戏列表
             </Heading>
             <Text
               color="gray.600"
               _dark={{ color: 'gray.400' }}
-              fontSize="lg"
+              fontSize="md"
             >
               选择你想查看出招表的游戏
             </Text>
@@ -46,11 +45,9 @@ export function GamesSection(): React.JSX.Element {
           <Grid
             templateColumns={{
               base: '1fr',
-              sm: 'repeat(2, 1fr)',
-              md: 'repeat(3, 1fr)',
-              lg: 'repeat(4, 1fr)',
+              md: 'repeat(2, 1fr)',
             }}
-            gap={6}
+            gap={8}
           >
             {games.map((game) => (
               <GameCard

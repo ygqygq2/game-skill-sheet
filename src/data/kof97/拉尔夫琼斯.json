@@ -1,6 +1,9 @@
 [
   {
     "name": "拉尔夫琼斯",
+    "avatar": {
+      "sprite": { "x": 291, "y": 279, "width": 300, "height": 252 }
+    },
     "skills": [
       {
         "name": "火爆头枪",

@@ -1,6 +1,7 @@
 [
   {
     "name": "荒狂雷光-夏尔米",
+    "avatar": { "sprite": { "x": 1491, "y": 1390, "width": 300, "height": 252 } },
     "skills": [
       { "name": "爆雷", "type": "投技", "command": "近敌←或→+C" },
       { "name": "影雷", "type": "投技", "command": "近敌←或→+D" },

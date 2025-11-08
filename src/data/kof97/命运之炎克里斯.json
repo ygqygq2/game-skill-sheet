@@ -1,6 +1,9 @@
 [
   {
     "name": "命运之炎克里斯",
+    "avatar": {
+      "sprite": { "x": 1782, "y": 1390, "width": 300, "height": 252 }
+    },
     "skills": [
       { "name": "地之罚", "type": "投技", "command": "近敌←或→+C" },
       { "name": "天之罪", "type": "投技", "command": "近敌←或→+D" },

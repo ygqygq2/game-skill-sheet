@@ -21,6 +21,13 @@ export const routes: RouteObject[] = [
           return { Component: Page };
         },
       },
+      {
+        path: 'kof97/sprite-tune',
+        lazy: async () => {
+          const { Kof97SpriteTune } = await import('@/pages/kof97/sprite-tune');
+          return { Component: Kof97SpriteTune };
+        },
+      },
     ],
   },
   { path: '*', element: <NotFoundPage /> },
