@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Image, type BoxProps } from '@chakra-ui/react';
 import { SPRITE_IMAGE, SPRITE_WIDTH, SPRITE_HEIGHT, type SpritePosition } from '@/config/kof97-sprite';
+import { getAssetUrl } from '@/lib/get-asset-url';
 
 export interface Kof97AvatarProps extends Omit<BoxProps, 'children'> {
   /** 角色名称 */
@@ -99,7 +100,7 @@ export function Kof97Avatar({
           as="div"
           width={`${actualSpriteWidth}px`}
           height={`${actualSpriteHeight}px`}
-          backgroundImage={`url(${SPRITE_IMAGE})`}
+          backgroundImage={`url(${getAssetUrl(SPRITE_IMAGE)})`}
           backgroundRepeat="no-repeat"
           backgroundPosition={`-${spritePos.x}px -${spritePos.y}px`}
           transform={`scale(${scale})`}
@@ -128,7 +129,7 @@ export function Kof97Avatar({
         as="div"
         width={`${actualSpriteWidth}px`}
         height={`${actualSpriteHeight}px`}
-        backgroundImage={`url(${SPRITE_IMAGE})`}
+        backgroundImage={`url(${getAssetUrl(SPRITE_IMAGE)})`}
         backgroundRepeat="no-repeat"
         backgroundPosition={`-${spritePos.x}px -${spritePos.y}px`}
         transform={`scale(${scale})`}
@@ -197,7 +198,7 @@ export function Kof97AvatarSimple({
       width={`${size}px`}
       height={`${size}px`}
       borderRadius="md"
-      backgroundImage={`url(${SPRITE_IMAGE})`}
+      backgroundImage={`url(${getAssetUrl(SPRITE_IMAGE)})`}
       backgroundPosition={`${bgPosX}% ${bgPosY}%`}
       backgroundSize={`${bgWidth}% ${bgHeight}%`}
       backgroundRepeat="no-repeat"
