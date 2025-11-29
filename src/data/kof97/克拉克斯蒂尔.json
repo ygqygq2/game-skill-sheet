@@ -10,25 +10,28 @@
         "type": "投技",
         "command": "近敌←或→+C",
         "description": "近身投技，快速将对手摔倒在地。",
-        "images": ["584_2025031853837856.jpg"]
+        "images": ["202511291642.gif"]
       },
       {
         "name": "渔师",
         "type": "投技",
         "command": "近敌←或→+D",
-        "description": "近身投技，力量型摔技。"
+        "description": "近身投技，力量型摔技。",
+        "images": ["202511291652.gif"]
       },
       {
         "name": "跳入死亡湖",
         "type": "投技",
         "command": "空中近敌↑以外方向+C或D",
-        "description": "空中投技，需在跳跃时近身使用。"
+        "description": "空中投技，需在跳跃时近身使用。",
+        "images": ["202511291634.gif"]
       },
       {
         "name": "踏踢",
         "type": "特殊技",
         "command": "→+B",
-        "description": "前踢，快速突进。"
+        "description": "前踢，快速突进。",
+        "images": ["584_2025031853837856.jpg"]
       },
       {
         "name": "机关炮拳",
