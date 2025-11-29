@@ -1,6 +1,7 @@
 import { Box, Button, Container, Heading, HStack, Image, Separator, Stack, Table, Tag, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 
 import { ImageCarousel } from '@/components/core/image-carousel';
 import { Kof97Avatar } from '@/components/kof97/kof97-avatar';
@@ -54,21 +55,31 @@ function useKof97Data() {
 
 const PAGE_SIZE = 6;
 
-export function Page(): React.JSX.Element {
+// Component to redirect to first character
+export function RedirectToFirstCharacter(): React.JSX.Element {
   const { characters } = useKof97Data();
-  const [selectedName, setSelectedName] = React.useState<string | null>(null);
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (characters.length > 0 && characters[0]) {
+      navigate(`/kof97/${encodeURIComponent(characters[0].name)}`, { replace: true });
+    }
+  }, [characters, navigate]);
+
+  return null;
+}
+
+// Component to show all characters with lazy loading
+export function AllCharactersPage(): React.JSX.Element {
+  const { characters } = useKof97Data();
+  const navigate = useNavigate();
   const [visibleCount, setVisibleCount] = React.useState<number>(PAGE_SIZE);
   const sentinelRef = React.useRef<HTMLDivElement | null>(null);
 
-  const filtered = React.useMemo(() => {
-    if (!selectedName) return characters;
-    return characters.filter((c) => c.name === selectedName);
-  }, [characters, selectedName]);
-
   React.useEffect(() => {
-    // Reset pagination when filter changes
+    // Reset pagination when characters change
     setVisibleCount(PAGE_SIZE);
-  }, [selectedName]);
+  }, [characters]);
 
   React.useEffect(() => {
     // IntersectionObserver for lazy loading
@@ -80,8 +91,8 @@ export function Page(): React.JSX.Element {
         const entry = entries[0];
         if (entry && entry.isIntersecting) {
           setVisibleCount((prev) => {
-            if (prev >= filtered.length) return prev;
-            return Math.min(prev + PAGE_SIZE, filtered.length);
+            if (prev >= characters.length) return prev;
+            return Math.min(prev + PAGE_SIZE, characters.length);
           });
         }
       },
@@ -90,10 +101,9 @@ export function Page(): React.JSX.Element {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [filtered.length]);
+  }, [characters.length]);
 
-  const names = React.useMemo(() => characters.map((c) => c.name), [characters]);
-  const showList = filtered.slice(0, visibleCount);
+  const showList = characters.slice(0, visibleCount);
 
   const { settings } = useSettings();
 
@@ -130,25 +140,24 @@ export function Page(): React.JSX.Element {
                 flexWrap="wrap"
                 gap={2}
               >
+                {characters.map((char) => (
+                  <Button
+                    key={char.name}
+                    size="sm"
+                    variant="outline"
+                    colorPalette={settings.primaryColor}
+                    onClick={() => navigate(`/kof97/${encodeURIComponent(char.name)}`)}
+                  >
+                    {char.name}
+                  </Button>
+                ))}
                 <Button
                   size="sm"
-                  variant={selectedName === null ? 'solid' : 'outline'}
+                  variant="solid"
                   colorPalette={settings.primaryColor}
-                  onClick={() => setSelectedName(null)}
                 >
                   全部
                 </Button>
-                {names.map((name) => (
-                  <Button
-                    key={name}
-                    size="sm"
-                    variant={selectedName === name ? 'solid' : 'outline'}
-                    colorPalette={settings.primaryColor}
-                    onClick={() => setSelectedName(name)}
-                  >
-                    {name}
-                  </Button>
-                ))}
               </Box>
             </Stack>
 
@@ -385,7 +394,7 @@ export function Page(): React.JSX.Element {
                 ref={sentinelRef}
                 h="1px"
               />
-              {showList.length < filtered.length ? (
+              {showList.length < characters.length ? (
                 <Text
                   textAlign="center"
                   color="gray.500"
@@ -410,4 +419,4 @@ export function Page(): React.JSX.Element {
   );
 }
 
-export default Page;
+export default AllCharactersPage;

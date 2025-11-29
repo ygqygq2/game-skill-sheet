@@ -17,8 +17,22 @@ export const routes: RouteObject[] = [
       {
         path: 'kof97',
         lazy: async () => {
-          const { Page } = await import('@/pages/kof97');
-          return { Component: Page };
+          const { RedirectToFirstCharacter } = await import('@/pages/kof97');
+          return { Component: RedirectToFirstCharacter };
+        },
+      },
+      {
+        path: 'kof97/all',
+        lazy: async () => {
+          const { AllCharactersPage } = await import('@/pages/kof97');
+          return { Component: AllCharactersPage };
+        },
+      },
+      {
+        path: 'kof97/:characterName',
+        lazy: async () => {
+          const { CharacterPage } = await import('@/pages/kof97/character');
+          return { Component: CharacterPage };
         },
       },
       {
