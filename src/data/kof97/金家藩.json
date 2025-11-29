@@ -6,15 +6,15 @@
     },
     "skills": [
       {
-        "name": "头像",
-        "type": "头像",
-        "command": "",
+        "name": "空连击",
+        "type": "特殊技",
+        "command": "→+A",
         "images": ["584_2025032853143401.png"]
       },
       {
-        "name": "背景图",
-        "type": "背景图",
-        "command": "",
+        "name": "连击",
+        "type": "特殊技",
+        "command": "→+B",
         "images": ["584_2025032853143211.png"]
       },
       {
